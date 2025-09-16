@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2025-09-16_17-56-36",
+            "content": "@@ -1,235 +0,0 @@\n-class Towel:%0A    def __init__ (self, color: str, size: str):%0A        self.color: str = color%0A        self.size: str = size%0A        self.wetness: int = 0%0A%0Avermelha = Towel (%22red%22, %22M%22)%0Aazul = Towel (%22blue%22, %22G%22)%0A%0Aprint (vermelha.color)%0A\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-09-16_18-12-55",
+            "content": "@@ -232,51 +232,4 @@\n or)%0A\n-print (vermelha.size)%0Aprint (vermelha.wetness)%0A\n",
+            "lines": "10"
+        },
+        {
+            "label": "2025-09-16_18-14-02",
+            "content": "@@ -10,23 +10,8 @@\n el:%0A\n-    #contrutor%0A\n     \n",
+            "lines": "12"
+        },
+        {
+            "label": "2025-09-16_18-16-06",
+            "content": "@@ -166,100 +166,8 @@\n  0%0A%0A\n-    def __str__ (self) -%3E str:%0A        return f%22cor: %7Bself.color%7D, tamanho: %7Bself.size%7D, %22%0A%0A\n verm\n",
+            "lines": "13"
+        },
+        {
+            "label": "2025-09-16_18-23-20",
+            "content": "@@ -255,31 +255,8 @@\n e%7D, \n-umidade: %7Bself.wetness%7D\n %22%0A%0Av\n",
+            "lines": "16"
+        },
+        {
+            "label": "2025-09-16_18-25-35",
+            "content": "@@ -279,85 +279,8 @@\n ss%7D%22\n-%0A    %0A    def dry (self, amount: int) -%3E Nome:%0A        self.wetness += amount\n %0A%0Ave\n",
+            "lines": "16"
+        },
+        {
+            "label": "2025-09-16_18-27-27",
+            "content": "@@ -318,17 +318,17 @@\n t) -%3E No\n-n\n+m\n e:%0A     \n",
+            "lines": "19"
+        },
+        {
+            "label": "2025-09-16_18-27-40",
+            "content": "@@ -164,85 +164,8 @@\n  = 0\n-%0A    %0A    def dry (self, amount: int) -%3E None:%0A        self.wetness += amount\n %0A%0A  \n@@ -281,16 +281,89 @@\n %7D%22%0A    %0A\n+    def dry (self, amount: int) -%3E None:%0A        self.wetness += amount%0A%0A\n vermelha\n",
+            "lines": "19"
+        },
+        {
+            "label": "2025-09-16_18-28-24",
+            "content": "class Towel:\n    #contrutor\n    def __init__ (self, color: str, size: str):\n        self.color: str = color\n        self.size: str = size\n        self.wetness: int = 0\n    \n    def dry (self, amount: int) -> None:\n        self.wetness += amount\n\n    def __str__ (self) -> str:\n        return f\"cor: {self.color}, tamanho: {self.size}, umidade: {self.wetness}\"\n    \nvermelha = Towel (\"red\", \"M\")\nazul = Towel (\"blue\", \"G\")\n\nprint (vermelha.color)\nprint (vermelha.size)\nprint (vermelha.wetness)\n",
+            "lines": "19"
+        }
+    ]
+}
