@@ -42,8 +42,43 @@
         },
         {
             "label": "2025-09-16_18-28-24",
-            "content": "class Towel:\n    #contrutor\n    def __init__ (self, color: str, size: str):\n        self.color: str = color\n        self.size: str = size\n        self.wetness: int = 0\n    \n    def dry (self, amount: int) -> None:\n        self.wetness += amount\n\n    def __str__ (self) -> str:\n        return f\"cor: {self.color}, tamanho: {self.size}, umidade: {self.wetness}\"\n    \nvermelha = Towel (\"red\", \"M\")\nazul = Towel (\"blue\", \"G\")\n\nprint (vermelha.color)\nprint (vermelha.size)\nprint (vermelha.wetness)\n",
+            "content": "@@ -165,484 +165,84 @@\n = 0%0A\n-%0A\n     \n-def getMaxWetness (self) -%3E int: %0A        if self.size == %22P%22:%0A            return 10%0A        elif self.size == %22M%22:%0A            return 20%0A        elif self.size == %22G%22:%0A            return 30%0A        else:%0A            return 0%0A%0A    def dry (self, amount: int) -%3E None:%0A        self.wetness += amount%0A        max_wetness = self.getMaxWetness()%0A        if self.wetness %3E max_wetness:%0A            return (%22toalha encharcada%22)%0A        else:%0A            return (%22toalha seca%22)%0A\n+%0A    def dry (self, amount: int) -%3E None:%0A        self.wetness += amount\n %0A%0A  \n@@ -489,8 +489,5 @@\n ess)\n- %0A%0A\n %0A\n",
             "lines": "19"
+        },
+        {
+            "label": "2025-09-29_18-14-07",
+            "content": "@@ -641,80 +641,8 @@\n a%22)%0A\n-        %0A    def wring (self) -%3E None:%0A        self.wetness = 0%0A        \n %0A%0A  \n",
+            "lines": "37"
+        },
+        {
+            "label": "2025-09-29_18-29-00",
+            "content": "@@ -701,16 +701,24 @@\n ess = 0%0A\n+        \n %0A%0A    de\n@@ -888,16 +888,23 @@\n , %22G%22)%0A%0A\n+print (\n vermelha\n@@ -908,21 +908,21 @@\n lha.\n-dry(15\n+color\n )%0Aprint\n+ \n (ver\n@@ -926,14 +926,43 @@\n vermelha\n+.size)%0Aprint (vermelha.wetness\n )\n-%0A\n  %0A%0A%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-09-29_18-35-03",
+            "content": "@@ -898,11 +898,27 @@\n ry(1\n-0)%0A%0A\n+5)%0Aprint(vermelha)%0A \n %0A%0A%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-09-29_18-35-52",
+            "content": "@@ -880,23 +880,16 @@\n , %22G%22)%0A%0A\n-print (\n vermelha\n@@ -893,62 +893,15 @@\n lha.\n-color)%0Aprint (vermelha.size)%0Aprint (vermelha.wetness)%0A\n+dry(10)\n %0A%0A%0A%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-09-29_18-39-13",
+            "content": "@@ -955,44 +955,8 @@\n s)%0A%0A\n-vermelha.dry(15)%0Aprint (vermelha)%0A%0A%0A\n %0A%0A%0A%0A\n",
+            "lines": "43"
+        },
+        {
+            "label": "2025-09-29_18-40-12",
+            "content": "@@ -964,18 +964,18 @@\n lha.dry(\n-30\n+15\n )%0Aprint \n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-09-29_18-45-01",
+            "content": "class Towel:\n    #contrutor\n    def __init__ (self, color: str, size: str):\n        self.color: str = color\n        self.size: str = size\n        self.wetness: int = 0\n\n    def getMaxWetness (self) -> int: \n        if self.size == \"P\":\n            return 10\n        elif self.size == \"M\":\n            return 20\n        elif self.size == \"G\":\n            return 30\n        else:\n            return 0\n\n    def dry (self, amount: int) -> None:\n        self.wetness += amount\n        max_wetness = self.getMaxWetness()\n        if self.wetness > max_wetness:\n            return (\"toalha encharcada\")\n        else:\n            return (\"toalha seca\")\n        \n    def wring (self) -> None:\n        self.wetness = 0\n\n\n    def __str__ (self) -> str:\n        return f\"cor: {self.color}, tamanho: {self.size}, umidade: {self.wetness}\"\n    \nvermelha = Towel (\"red\", \"M\")\nazul = Towel (\"blue\", \"G\")\n\nprint (vermelha.color)\nprint (vermelha.size)\nprint (vermelha.wetness)\n\nvermelha.dry(30)\nprint (vermelha)\n\n\n\n\n\n\n",
+            "lines": "47"
         }
     ]
 }

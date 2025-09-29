@@ -7,8 +7,8 @@ version: 0.0.1
 database: database
 expanded:
 - configuracao-e-aquecimento
-- bloco_b-primeiras-classes
 - campanha-principal
+- bloco_b-primeiras-classes
 tasks: {}
 flags:
   quests: 0
@@ -16,4 +16,4 @@ flags:
   tasks: 1
   graph: 1
   xray: 0
-index: bloco_b-primeiras-classes
+index: animal
