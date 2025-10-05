@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-05_19-45-47",
+            "content": "@@ -145,161 +145,8 @@\n     \n-def toString(self):%0A        # display com 2 casas e battery inteiro%0A        return %22display = %7B:.2f%7D, battery = %7B%7D%22.format(self.display, self.battery)     %0A%0A\n+    \n",
+            "lines": "7"
+        },
+        {
+            "label": "2025-10-05_19-46-49",
+            "content": "@@ -161,16 +161,64 @@\n (self):%0A\n+        # display com 2 casas e battery inteiro%0A\n         \n@@ -296,167 +296,8 @@\n ry) \n-%0A%0A    def charge(self, amount):%0A        self.battery += amount%0A        if self.battery %3E self.batteryMax:%0A            self.battery = self.batteryMax %0A    %0A    \n     \n",
+            "lines": "10"
+        },
+        {
+            "label": "2025-10-05_19-49-11",
+            "content": "@@ -398,215 +398,19 @@\n ax %0A\n-%0A\n     \n-def sum(self, a, b):%0A        # precisa de bateria%0A        if self.battery %3C= 0:%0A            print(%22fail: bateria insuficiente%22)%0A            return%0A        self.display = a + b%0A        self.battery -= 1 %0A%0A\n+%0A        \n %0A%0A\n",
+            "lines": "16"
+        },
+        {
+            "label": "2025-10-05_19-49-50",
+            "content": "@@ -608,167 +608,5 @@\n  %0A%0A%0A\n-    def main():%0A        calc = None%0A        try:%0A            while True:%0A            line = input().strip()%0A            if line == %22%22:%0A                continue%0A%0A%0A\n %0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-10-05_19-52-46",
+            "content": "@@ -604,16 +604,20 @@\n -= 1 %0A%0A%0A\n+    \n def main\n@@ -620,16 +620,20 @@\n main():%0A\n+    \n     calc\n@@ -640,16 +640,20 @@\n  = None%0A\n+    \n     try:\n@@ -653,16 +653,20 @@\n    try:%0A\n+    \n         \n@@ -769,1316 +769,6 @@\n ue%0A%0A\n-            # ecoa comando%0A            print(%22$%22 + line)%0A%0A            parts = line.split()%0A            cmd = parts%5B0%5D%0A%0A            if cmd == %22end%22:%0A                break%0A%0A            elif cmd == %22init%22:%0A                # init batteryMax%0A                if len(parts) %3E= 2:%0A                    maxb = int(parts%5B1%5D)%0A                    calc = Calculator(maxb)%0A%0A            elif cmd == %22show%22:%0A                if calc is not None:%0A                    print(calc.toString())%0A%0A            elif cmd == %22charge%22:%0A                if calc is not None and len(parts) %3E= 2:%0A                    amt = int(parts%5B1%5D)%0A                    calc.charge(amt)%0A%0A            elif cmd == %22sum%22:%0A                if calc is not None and len(parts) %3E= 3:%0A                    a = float(parts%5B1%5D)%0A                    b = float(parts%5B2%5D)%0A                    calc.sum(a, b)%0A%0A            elif cmd == %22div%22:%0A                if calc is not None and len(parts) %3E= 3:%0A                    den = float(parts%5B1%5D)%0A                    num = float(parts%5B2%5D)%0A                    # note: division by zero check uses num == 0.0%0A                    if num == 0.0:%0A                        # follow spec: consumes battery and prints error in div()%0A                        calc.div(den, num)%0A                    else:%0A                        calc.div(den, num)\n+%0A%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-10-05_19-53-25",
+            "content": "@@ -165,56 +165,8 @@\n f):%0A\n-        # display com 2 casas e battery inteiro%0A\n     \n@@ -243,16 +243,17 @@\n battery)\n+ \n %0A%0A    de\n@@ -384,32 +384,33 @@\n  self.batteryMax\n+ \n %0A%0A    def sum(se\n@@ -604,391 +604,9 @@\n -= 1\n-%0A%0A    def div(self, den, num):%0A        # precisa de bateria%0A        if self.battery %3C= 0:%0A            print(%22fail: bateria insuficiente%22)%0A            return%0A        # divide por zero gasta bateria e mostra erro%0A        if num == 0:%0A            self.battery -= 1%0A            print(%22fail: divisao por zero%22)%0A            return%0A        self.display = den / num%0A        self.battery -= 1\n+ \n %0A%0A%0Ad\n@@ -2065,146 +2065,4 @@\n num)\n-%0A%0A            else:%0A                print(%22fail: comando invalido%22)%0A%0A    except EOFError:%0A        pass%0A%0A%0Aif __name__ == %22__main__%22:%0A    main()\n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-10-05_20-03-44",
+            "content": "class Calculator:\n    def __init__(self, batteryMax):\n        self.display = 0.0\n        self.battery = 0\n        self.batteryMax = batteryMax\n\n    def toString(self):\n        # display com 2 casas e battery inteiro\n        return \"display = {:.2f}, battery = {}\".format(self.display, self.battery)\n\n    def charge(self, amount):\n        self.battery += amount\n        if self.battery > self.batteryMax:\n            self.battery = self.batteryMax\n\n    def sum(self, a, b):\n        # precisa de bateria\n        if self.battery <= 0:\n            print(\"fail: bateria insuficiente\")\n            return\n        self.display = a + b\n        self.battery -= 1\n\n    def div(self, den, num):\n        # precisa de bateria\n        if self.battery <= 0:\n            print(\"fail: bateria insuficiente\")\n            return\n        # divide por zero gasta bateria e mostra erro\n        if num == 0:\n            self.battery -= 1\n            print(\"fail: divisao por zero\")\n            return\n        self.display = den / num\n        self.battery -= 1\n\n\ndef main():\n    calc = None\n    try:\n        while True:\n            line = input().strip()\n            if line == \"\":\n                continue\n\n            # ecoa comando\n            print(\"$\" + line)\n\n            parts = line.split()\n            cmd = parts[0]\n\n            if cmd == \"end\":\n                break\n\n            elif cmd == \"init\":\n                # init batteryMax\n                if len(parts) >= 2:\n                    maxb = int(parts[1])\n                    calc = Calculator(maxb)\n\n            elif cmd == \"show\":\n                if calc is not None:\n                    print(calc.toString())\n\n            elif cmd == \"charge\":\n                if calc is not None and len(parts) >= 2:\n                    amt = int(parts[1])\n                    calc.charge(amt)\n\n            elif cmd == \"sum\":\n                if calc is not None and len(parts) >= 3:\n                    a = float(parts[1])\n                    b = float(parts[2])\n                    calc.sum(a, b)\n\n            elif cmd == \"div\":\n                if calc is not None and len(parts) >= 3:\n                    den = float(parts[1])\n                    num = float(parts[2])\n                    # note: division by zero check uses num == 0.0\n                    if num == 0.0:\n                        # follow spec: consumes battery and prints error in div()\n                        calc.div(den, num)\n                    else:\n                        calc.div(den, num)\n\n            else:\n                print(\"fail: comando invalido\")\n\n    except EOFError:\n        pass\n\n\nif __name__ == \"__main__\":\n    main()",
+            "lines": "95"
+        }
+    ]
+}

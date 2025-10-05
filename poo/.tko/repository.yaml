@@ -8,15 +8,17 @@ database: database
 expanded:
 - campanha-principal
 - bloco_b-primeiras-classes
+- configuracao-e-aquecimento
 tasks:
   toalha: '{rate:60, iagen:_, other:_, alone:2, study:100}'
   animal: '{rate:100, iagen:_, other:_, alone:3, study:60}'
   carro: '{rate:100, iagen:_, other:_, alone:1, study:25}'
+  calculadora: '{rate:100, iagen:_, other:_, alone:1, study:20}'
   enxugar: '{rate:100, iagen:_, other:_, alone:3, study:90}'
 flags:
-  quests: 0
-  tracks: 0
+  quests: 2
+  tracks: 1
   tasks: 1
   graph: 1
   xray: 0
-index: calculadora
+index: bloco_b-agregação-simples
