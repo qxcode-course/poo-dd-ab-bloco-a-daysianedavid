@@ -26,7 +26,6 @@ class Towel:
     def wring (self) -> None:
         self.wetness = 0
 
-
     def __str__ (self) -> str:
         return f"cor: {self.color}, tamanho: {self.size}, umidade: {self.wetness}"
     
@@ -39,9 +38,3 @@ print (vermelha.wetness)
 
 vermelha.dry(30)
 print (vermelha)
-
-
-
-
-
-
