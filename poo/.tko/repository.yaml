@@ -17,8 +17,8 @@ tasks:
   enxugar: '{rate:100, iagen:_, other:_, alone:3, study:90}'
 flags:
   quests: 2
-  tracks: 1
+  tracks: 0
   tasks: 1
   graph: 1
   xray: 0
-index: bloco_b-agregação-simples
+index: enxugar
